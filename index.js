@@ -3,7 +3,7 @@ var stocksQuantity = document.querySelector("#quantity");
 var currentPrice = document.querySelector("#current-price");
 var checkBtn = document.querySelector("#chk-btn");
 var outputB= document.querySelector(".output");
-var containerColor = document.querySelector(".container");
+var bodyColor = document.querySelector(".body");
 
 checkBtn.addEventListener('click', submitHandler);
 
@@ -26,13 +26,13 @@ function calculateProfitAndLoss(initial, quantity, current) {
     if (initial > current) {
         var loss = (initial - current) * quantity;
         var lossPercentage = (loss / (initial * quantity)) * 100;
-         
+         bodyColor.style.backgroundColor="red"
         showMessage (`OOPS!  Your loss is ${loss} and the loss percentage is ${lossPercentage} %`);
 
     } else if (current > initial) {
         var profit = (current - initial) * quantity;
         var profitPercentage = (profit / (initial * quantity)) * 100;
-    
+        bodyColor.style.backgroundColor="green"
          showMessage(` Your Profit is ${profit} and the profit percentage is ${profitPercentage} %`);
 
 

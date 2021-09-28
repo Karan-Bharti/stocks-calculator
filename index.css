@@ -4,8 +4,28 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     margin: auto;
     text-align: center;
-    background-color: blanchedalmond;
+    background-color: burlywood;
 }
-container{
-    background-color: red/green;
+.container{
+    background-color:burlywood;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+margin: auto;
+}
+label{
+    font-weight: bold;
+    padding: 1rem;
+}
+input{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+button{
+    width: 10%;
+    margin: auto;
+}
+output{
+    font-weight: bold;
 }
